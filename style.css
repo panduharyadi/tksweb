@@ -1,0 +1,420 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+.navbar {
+	background-color: #0b3b82;
+	z-index: 20;
+	position: relative;
+	transition: background-color 0.3s ease;
+}
+
+.sticky-top {
+	position: sticky;
+	top: 0;
+	z-index: 1030;
+}
+
+.navbar-toggler-icon {
+	background-color: #fff;
+	width: 30px;
+	height: 2px;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+	color: white !important;
+	font-size: 1rem;
+	font-weight: 500;
+	margin-right: 1rem;
+}
+
+.navbar .nav-link:hover {
+	color: #ffa500 !important;
+}
+
+.hero-overlay {
+	position: relative;
+	display: flex;
+	align-items: center; /* Menyusun caption secara vertikal di tengah */
+	justify-content: flex-start; /* Menyusun caption di sebelah kiri */
+	height: 100%; /* Mengatur overlay untuk memanfaatkan seluruh tinggi gambar */
+}
+
+.hero-overlay img {
+	width: 100%;
+	height: 80vh;
+	object-fit: cover;
+	filter: brightness(0.5);
+}
+
+.carousel-inner {
+	max-height: 80vh;
+	overflow: hidden;
+}
+
+.carousel-caption {
+	text-align: center;
+	bottom: 30%;
+}
+
+.carousel-caption h1 {
+	color: #0b3b82;
+}
+
+.carousel-caption ul li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	gap: 10px;
+	line-height: 2rem;
+}
+
+.carousel-indicators {
+	bottom: 10px;
+}
+
+.carousel-indicators button {
+	background-color: #ffa500;
+	border: none;
+	width: 35px;
+	height: 35px;
+}
+
+.carousel-indicators .active {
+	background-color: #ff8c00;
+}
+
+h2 {
+	color: #0b3b82;
+}
+
+h4 {
+	color: #0b3b82;
+}
+
+.btn {
+	background-color: #ffa500;
+	color: white;
+	font-size: 1.2rem;
+	border: none;
+	transition: background-color 0.3s;
+	border-radius: 0;
+	padding: 0.5rem 2rem;
+}
+
+.btn:hover {
+	background-color: #dda431;
+	color: white;
+}
+
+.product-card {
+	position: relative;
+	overflow: hidden;
+	color: #fff;
+	text-align: center;
+	height: 100%;
+}
+
+.product-card img {
+	width: 100%;
+	max-height: 250px;
+	filter: brightness(0.5);
+	transition: transform 0.3s ease, filter 0.3s ease;
+}
+.product-card:hover img {
+	filter: brightness(0.7);
+	transform: scale(1.1);
+}
+.product-card .content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+}
+.product-card h3 {
+	font-size: 1.8rem;
+	margin-bottom: 0.5rem;
+}
+.product-card p {
+	font-size: 1rem;
+	margin: 0;
+}
+.product-card .divider {
+	width: 50px;
+	height: 2px;
+	background: #ffc107;
+	margin: 1rem auto;
+}
+
+#map {
+	width: 100%;
+	height: 80vh;
+	background-color: #fff;
+	max-width: 100%;
+}
+
+.custom-tooltip {
+	background-color: #333;
+	color: #fff;
+	font-size: 14px;
+	border-radius: 4px;
+	padding: 5px;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#who-we-are-section {
+	background-color: #0b3b82;
+	color: #fff;
+	padding: 10px 0;
+}
+
+.who-we-are-section .row {
+	align-items: center;
+	justify-content: center;
+}
+
+.who-we-are-span {
+	max-width: 100%;
+	height: 140px;
+	background-color: #ffa500;
+	text-align: center;
+	padding: 10px;
+	margin: 0 10px;
+}
+
+.who-we-are-span p {
+	margin-top: 1rem;
+	font-size: 13px;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.divider-span {
+	width: 50px;
+	height: 2px;
+	background: #fff;
+	margin: auto;
+}
+
+.stay-updated-section {
+	padding: 50px 0;
+	background-color: #f8f9fa;
+	text-align: center;
+}
+
+.stay-updated-section .section-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: #0b3b82;
+	margin-bottom: 30px;
+}
+
+.slider-container {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+.slider {
+	display: flex;
+	transition: transform 0.5s ease;
+	gap: 22px;
+}
+
+.slide {
+	flex: 0 0 calc(33.333% - 20px);
+	text-align: left;
+	overflow: hidden;
+}
+
+.image-wrapper {
+	position: relative; /* Penting untuk menempatkan overlay */
+	width: 100%;
+	overflow: hidden; /* Memastikan overlay dan gambar tidak keluar */
+}
+
+.image-wrapper img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover img {
+	transform: scale(1.1); /* Perbesar gambar saat di-hover */
+}
+
+.image-wrapper .read-more-overlay {
+	position: absolute;
+	width: 100%;
+	height: 120%; /* Pastikan overlay menutupi seluruh gambar */
+	background-color: rgba(0, 0, 0, 0.5); /* Background semi-transparan */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0; /* Default tersembunyi */
+	transition: opacity 0.3s ease; /* Animasi fade-in */
+}
+
+.image-wrapper:hover .read-more-overlay {
+	opacity: 1; /* Menampilkan overlay saat gambar di-hover */
+}
+
+.read-more-btn {
+	padding: 10px 20px;
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.slide div {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 10px;
+	margin-top: 10px;
+	font-size: 14px;
+	color: #555;
+}
+
+.slide div p {
+	margin: 0;
+}
+
+.slide div p:first-child {
+	font-weight: bold;
+}
+
+.slide div p:nth-child(2) {
+	font-size: 18px;
+	color: #ffa500;
+}
+
+.slide h3 {
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.slide h3 a {
+	text-decoration: none;
+	color: #0b3b82;
+	display: flex;
+	justify-content: flex-start;
+	text-align: left;
+}
+
+.dots-container {
+	text-align: center;
+	margin-top: 15px;
+}
+
+.dot {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin: 0 5px;
+	background-color: #bbb;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.dot.active {
+	background-color: #ffc107;
+}
+
+.footer-section {
+	background-color: #0b3b82;
+	color: #fff;
+	padding: 20px 0;
+}
+
+footer img {
+	width: 100px;
+}
+
+.footer-caption p {
+	text-align: left;
+	font-size: 13px;
+}
+
+@media (max-width: 768px) {
+	.carousel-caption {
+		text-align: center;
+		bottom: 20%;
+	}
+
+	#map {
+		height: 100vh;
+	}
+
+	/* Pastikan slider hanya memuat 1 gambar di layar kecil */
+	.slider-container {
+		height: auto;
+	}
+
+	.slide {
+		min-width: 100%; /* Hanya 1 gambar per layar */
+		flex: 0 0 100%;
+	}
+
+	.slider {
+		gap: 10px; /* Kurangi jarak antar slide */
+	}
+
+	/* Tampilkan tulisan di bawah gambar */
+	.slide div {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 10px;
+		margin-top: 10px;
+		font-size: 12px;
+		color: #555;
+	}
+
+	.who-we-are-span {
+		margin-top: 10px;
+	}
+
+	.who-we-are-content {
+		text-align: center;
+		margin-bottom: 10px;
+	}
+}
+
+@media (max-width: 480px) {
+	#map {
+		height: 100vh;
+	}
+
+	.footer-item {
+		text-align: left; /* Align to the left for larger screens */
+	}
+
+	/* Pastikan jarak dan ukuran lebih proporsional */
+	.slide div {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 10px;
+		margin-top: 10px;
+		font-size: 12px;
+		color: #555;
+	}
+}

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dairy Products</title>
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+			rel="stylesheet" />
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="style.css" />
+
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+			rel="stylesheet" />
+
+		<!-- Custom MAP -->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+		<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+		<script src="https://unpkg.com/leaflet-tilelayer-colorfilter/leaflet-tilelayer-colorfilter.min.js"></script>
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav class="navbar navbar-expand-lg sticky-top p-4">
+			<div class="container">
+				<a class="navbar-brand" href="#">
+					<img
+						src="https://via.placeholder.com/150x50"
+						alt="Logo"
+						height="40" />
+				</a>
+				<button
+					class="navbar-toggler text-white"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="/index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/about.html">About Us</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Hero Section -->
+		<section class="container-fluid px-0">
+			<div
+				id="heroCarousel"
+				class="carousel hero-section"
+				data-bs-ride="carousel">
+				<!-- Carousel Inner -->
+				<div class="carousel-inner">
+					<!-- 1 -->
+					<div class="carousel-item active">
+						<div class="hero-overlay position-relative">
+							<img src="./img/images.jpg" class="d-block w-100" alt="Image 1" />
+							<div class="carousel-caption text-start">
+								<h1 class="display-4 fw-bold">Welcome to Dairy World</h1>
+								<ul class="list-unstyled">
+									<li>Quality Milk</li>
+									<li>Delicious Butter</li>
+									<li>Healthy Cheese</li>
+								</ul>
+								<a href="#" class="btn btn-primary btn-lg">Explore More</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- 2 -->
+					<div class="carousel-item">
+						<div class="hero-overlay position-relative">
+							<img
+								src="./img/images2.jpg"
+								class="d-block w-100"
+								alt="Image 2" />
+							<div class="carousel-caption text-start">
+								<h1 class="display-4 fw-bold">Discover the Taste</h1>
+								<ul class="list-unstyled">
+									<li>Quality Milk</li>
+									<li>Delicious Butter</li>
+									<li>Healthy Cheese</li>
+								</ul>
+								<a href="#" class="btn btn-primary btn-lg">Learn More</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- 3 -->
+					<div class="carousel-item">
+						<div class="hero-overlay position-relative">
+							<img src="./img/images.jpg" class="d-block w-100" alt="Image 3" />
+							<div class="carousel-caption text-start">
+								<h1 class="display-4 fw-bold">Innovating Your Kitchen</h1>
+								<ul class="list-unstyled">
+									<li>Quality Milk</li>
+									<li>Delicious Butter</li>
+									<li>Healthy Cheese</li>
+								</ul>
+								<a href="#" class="btn btn-lg">Get Inspired</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Indicators -->
+				<div class="carousel-indicators">
+					<button
+						type="button"
+						data-bs-target="#heroCarousel"
+						data-bs-slide-to="0"
+						class="active"
+						aria-current="true"></button>
+					<button
+						type="button"
+						data-bs-target="#heroCarousel"
+						data-bs-slide-to="1"></button>
+					<button
+						type="button"
+						data-bs-target="#heroCarousel"
+						data-bs-slide-to="2"></button>
+				</div>
+			</div>
+		</section>
+
+		<!-- Products -->
+		<section class="container my-5">
+			<h2 class="text-center mb-3 pt-5">Our Products</h2>
+			<p class="text-center mb-4">Your Trusted Partner in Food Business</p>
+
+			<div class="container py-5">
+				<div class="row g-0">
+					<!-- Foodservice Card -->
+					<div class="col-md-4">
+						<div class="product-card">
+							<img src="./img/images.jpg" alt="Foodservice" />
+							<div class="content">
+								<h3>Foodservice</h3>
+								<div class="divider"></div>
+								<p>Discover Products Designed for Your Recipes</p>
+							</div>
+						</div>
+					</div>
+					<!-- Retail Card -->
+					<div class="col-md-4">
+						<div class="product-card">
+							<img src="./img/images2.jpg" alt="Retail" />
+							<div class="content">
+								<h3>Retail</h3>
+								<div class="divider"></div>
+								<p>We Bring Products Consumers Really Want</p>
+							</div>
+						</div>
+					</div>
+					<!-- Industry Card -->
+					<div class="col-md-4">
+						<div class="product-card">
+							<img src="./img/images.jpg" alt="Industry" />
+							<div class="content">
+								<h3>Industry</h3>
+								<div class="divider"></div>
+								<p>Improving Function Health</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Katalog -->
+		<section class="container my-5">
+			<div class="mb-5">
+				<h2 class="text-center mb-3">Katalog</h2>
+				<p class="text-center mb-4">Explore Our Wide Range of Products</p>
+
+				<div class="text-center mt-5 pb-5">
+					<a class="btn btn-lg" href="./katalog.html">Katalog</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- National Distribution -->
+		<section class="container my-5" id="national-distribution">
+			<h2 class="text-center mb-3 pt-5">National Distribution</h2>
+			<p class="text-center">Branches and Sub-Distributors</p>
+
+			<div class="container">
+				<div id="map"></div>
+			</div>
+		</section>
+
+		<!-- About Us -->
+		<section id="who-we-are-section" class="who-we-are-section">
+			<div class="container p-5">
+				<div class="row">
+					<!-- Kolom Teks Kiri -->
+					<div class="col-md-5 who-we-are-content">
+						<h3 class="section-title">Who We Are</h3>
+						<p class="section-description">
+							For more than 70 years, Prambanan Kencana has supplied products to
+							the Foodservice, Retail, Food Industry, and E-commerce channels in
+							Indonesia.
+						</p>
+						<a class="btn">About us</a>
+					</div>
+
+					<!-- Kolom Teks Kanan -->
+					<div class="col-md-2 who-we-are-span">
+						<h3 class="p-2">70+</h3>
+						<div class="divider-span"></div>
+						<p>Years in Business</p>
+					</div>
+					<div class="col-md-2 who-we-are-span">
+						<h3 class="p-2">1,800+</h3>
+						<div class="divider-span"></div>
+						<p>Global and National Best Brands</p>
+					</div>
+					<div class="col-md-2 who-we-are-span">
+						<h3 class="p-2">65</h3>
+						<div class="divider-span"></div>
+						<p>Distribution Channels</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="stay-updated-section" class="stay-updated-section">
+			<div class="container pb-5">
+				<h2 class="text-center mb-3 pt-5">National Distribution</h2>
+				<p class="text-center">Branches and Sub-Distributors</p>
+
+				<div class="slider-container pt-5">
+					<div class="slider">
+						<div class="slide">
+							<div class="image-wrapper">
+								<img src="img/images.jpg" alt="Image 1" />
+								<div class="read-more-overlay">
+									<a href="#!" class="read-more-btn">Read More</a>
+								</div>
+							</div>
+							<div>
+								<p>Article</p>
+								<p>&bull;</p>
+								<p>15/05/2025</p>
+							</div>
+							<h3>
+								<a href="#!">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
+									ut?
+								</a>
+							</h3>
+						</div>
+
+						<div class="slide">
+							<div class="image-wrapper">
+								<img src="img/images.jpg" alt="Image 1" />
+								<div class="read-more-overlay">
+									<a href="#!" class="read-more-btn">Read More</a>
+								</div>
+							</div>
+							<div>
+								<p>Article</p>
+								<p>&bull;</p>
+								<p>15/05/2025</p>
+							</div>
+							<h3>
+								<a href="#!">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
+									ut?
+								</a>
+							</h3>
+						</div>
+
+						<div class="slide">
+							<div class="image-wrapper">
+								<img src="img/images.jpg" alt="Image 1" />
+								<div class="read-more-overlay">
+									<a href="#!" class="read-more-btn">Read More</a>
+								</div>
+							</div>
+							<div>
+								<p>Article</p>
+								<p>&bull;</p>
+								<p>15/05/2025</p>
+							</div>
+							<h3>
+								<a href="#!">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
+									ut?
+								</a>
+							</h3>
+						</div>
+
+						<div class="slide">
+							<div class="image-wrapper">
+								<img src="img/images.jpg" alt="Image 1" />
+								<div class="read-more-overlay">
+									<a href="#!" class="read-more-btn">Read More</a>
+								</div>
+							</div>
+							<div>
+								<p>Article</p>
+								<p>&bull;</p>
+								<p>15/05/2025</p>
+							</div>
+							<h3>
+								<a href="#!">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
+									ut?
+								</a>
+							</h3>
+						</div>
+
+						<div class="slide">
+							<div class="image-wrapper">
+								<img src="img/images.jpg" alt="Image 1" />
+								<div class="read-more-overlay">
+									<a href="#!" class="read-more-btn">Read More</a>
+								</div>
+							</div>
+							<div>
+								<p>Article</p>
+								<p>&bull;</p>
+								<p>15/05/2025</p>
+							</div>
+							<h3>
+								<a href="#!">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
+									ut?
+								</a>
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="dots-container">
+					<span class="dot" data-index="0"></span>
+					<span class="dot" data-index="1"></span>
+					<span class="dot" data-index="2"></span>
+					<span class="dot" data-index="3"></span>
+				</div>
+
+				<div class="text-center mt-4">
+					<a class="btn" href="./katalog.html">More News and Update</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="text-center text-lg-start text-white footer-section">
+			<section class="content">
+				<div class="container-fluid text-center text-md-start mt-5">
+					<div class="row mt-3">
+						<div class="col-md-2 mx-auto mb-4 footer-item">
+							<img src="./img/images.jpg" alt="" />
+							<div class="footer-caption">
+								<p class="mt-4 text-sm-start">
+									Your Trusted Partner in Food Business with experience for more
+								</p>
+							</div>
+						</div>
+
+						<div class="col-md-2 mb-4 footer-item me-5">
+							<h6 class="text-uppercase fw-bold">Layanan Kami</h6>
+							<hr class="mb-4 mt-0 d-inline-block mx-auto" />
+							<div class="footer-caption">
+								<p>
+									<a href="#!" class="text-white text-decoration-none"
+										>Head Office Jl. Tanah Abang 2 no. 36 Jakarta 10160,
+										Indonesia</a
+									>
+								</p>
+
+								<p>
+									<a href="#!" class="text-white text-decoration-none"
+										>+62 (21) 381-0380</a
+									>
+								</p>
+
+								<p>
+									<a href="#!" class="text-white text-decoration-none">
+										+6285210000633
+									</a>
+								</p>
+
+								<p>
+									<a href="" class="text-white text-decoration-none"
+										>+62 (21) 381-0342</a
+									>
+								</p>
+
+								<p>
+									<a href="" class="text-white text-decoration-none">
+										info@prb.co.id
+									</a>
+								</p>
+							</div>
+						</div>
+
+						<div class="col-md-2 mb-md-0 mb-4 footer-item">
+							<h6 class="text-uppercase fw-bold">Sitemap</h6>
+							<hr class="mb-4 mt-0 d-inline-block mx-auto" />
+							<div class="footer-caption">
+								<p><a href="" class="text-white">Home</a></p>
+								<p><a href="" class="text-white">About us</a></p>
+							</div>
+						</div>
+
+						<div class="col-md-2 mx-auto ms-5 mb-md-0 mb-4 footer-item">
+							<h6 class="text-uppercase fw-bold">Stay Update</h6>
+							<hr class="mb-4 mt-0 d-inline-block mx-auto" />
+							<div class="footer-caption">
+								<p>Be the first to get update</p>
+							</div>
+							<input
+								type="text"
+								placeholder="Enter your email adress"
+								class="p-2 px-3 border-0" />
+						</div>
+					</div>
+				</div>
+			</section>
+		</footer>
+
+		<!-- Bootstrap JS -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+		<script src="./js/map.js"></script>
+		<script src="./js/slider.js"></script>
+	</body>
+</html>
