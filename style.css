@@ -43,9 +43,9 @@ a {
 .hero-overlay {
 	position: relative;
 	display: flex;
-	align-items: center; /* Menyusun caption secara vertikal di tengah */
-	justify-content: flex-start; /* Menyusun caption di sebelah kiri */
-	height: 100%; /* Mengatur overlay untuk memanfaatkan seluruh tinggi gambar */
+	align-items: center;
+	justify-content: flex-start;
+	height: 100%;
 }
 
 .hero-overlay img {
@@ -240,9 +240,9 @@ h4 {
 }
 
 .image-wrapper {
-	position: relative; /* Penting untuk menempatkan overlay */
+	position: relative;
 	width: 100%;
-	overflow: hidden; /* Memastikan overlay dan gambar tidak keluar */
+	overflow: hidden;
 }
 
 .image-wrapper img {
@@ -253,23 +253,23 @@ h4 {
 }
 
 .image-wrapper:hover img {
-	transform: scale(1.1); /* Perbesar gambar saat di-hover */
+	transform: scale(1.1);
 }
 
 .image-wrapper .read-more-overlay {
 	position: absolute;
 	width: 100%;
-	height: 120%; /* Pastikan overlay menutupi seluruh gambar */
-	background-color: rgba(0, 0, 0, 0.5); /* Background semi-transparan */
+	height: 120%;
+	background-color: rgba(0, 0, 0, 0.5);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	opacity: 0; /* Default tersembunyi */
-	transition: opacity 0.3s ease; /* Animasi fade-in */
+	opacity: 0;
+	transition: opacity 0.3s ease;
 }
 
 .image-wrapper:hover .read-more-overlay {
-	opacity: 1; /* Menampilkan overlay saat gambar di-hover */
+	opacity: 1;
 }
 
 .read-more-btn {
@@ -338,6 +338,117 @@ h4 {
 	background-color: #ffc107;
 }
 
+.breadcrumb {
+	background-color: #f8f9fa;
+	font-size: 14px;
+	padding: 10px 110px;
+}
+
+.breadcrumb-item a {
+	color: #879098;
+	text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+	color: #0b3b82;
+}
+
+.breadcrumb-item.active {
+	color: #6c757d; /* Grey color for the active page */
+}
+
+.bussiness-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+	margin-top: 60px;
+}
+
+.bussiness-card {
+	background: #fff;
+	padding: 20px;
+	text-align: center;
+	transition: transform 0.3s ease;
+}
+
+.bussiness-card:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 12px 12px rgba(22, 20, 20, 0.1);
+}
+
+.bussiness-card .icon {
+	width: 50px;
+	height: 50px;
+	margin-bottom: 15px;
+}
+
+.bussiness-card h5 {
+	color: #c29519;
+	font-size: 1.25rem;
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+
+.bussiness-card ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	color: #666;
+}
+
+.bussiness-card ul li {
+	font-size: 0.9rem;
+	line-height: 1.6;
+}
+
+.bussiness-icon {
+	color: #0b3b82;
+	font-size: 2.5rem;
+	margin-bottom: 1.5rem;
+	padding: 1rem;
+}
+
+.content-icon {
+	font-size: 3.5rem;
+	color: #c29519;
+	text-align: center;
+	display: block;
+}
+
+.vision-mission-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 30px;
+	align-items: center;
+}
+
+.quote {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 35px;
+}
+
+.quote p {
+	font-size: 1.2rem;
+}
+
+.vision,
+.mission {
+	text-align: left;
+	background: #fff;
+}
+
+.vision h3,
+.mission h3 {
+	color: #c29519;
+	font-size: 1.5rem;
+	margin-bottom: 15px;
+}
+
+.image img {
+	width: 100%;
+}
+
 .footer-section {
 	background-color: #0b3b82;
 	color: #fff;
@@ -363,21 +474,19 @@ footer img {
 		height: 100vh;
 	}
 
-	/* Pastikan slider hanya memuat 1 gambar di layar kecil */
 	.slider-container {
 		height: auto;
 	}
 
 	.slide {
-		min-width: 100%; /* Hanya 1 gambar per layar */
+		min-width: 100%;
 		flex: 0 0 100%;
 	}
 
 	.slider {
-		gap: 10px; /* Kurangi jarak antar slide */
+		gap: 10px;
 	}
 
-	/* Tampilkan tulisan di bawah gambar */
 	.slide div {
 		display: flex;
 		justify-content: flex-start;
@@ -396,6 +505,14 @@ footer img {
 		text-align: center;
 		margin-bottom: 10px;
 	}
+
+	.bussiness-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.vision-mission-grid {
+		grid-template-columns: 1fr;
+	}
 }
 
 @media (max-width: 480px) {
@@ -404,10 +521,9 @@ footer img {
 	}
 
 	.footer-item {
-		text-align: left; /* Align to the left for larger screens */
+		text-align: left;
 	}
 
-	/* Pastikan jarak dan ukuran lebih proporsional */
 	.slide div {
 		display: flex;
 		justify-content: flex-start;
@@ -416,5 +532,13 @@ footer img {
 		margin-top: 10px;
 		font-size: 12px;
 		color: #555;
+	}
+
+	.bussiness-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.vision-mission-grid {
+		grid-template-columns: 1fr;
 	}
 }
