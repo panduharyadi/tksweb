@@ -31,7 +31,9 @@
 	</head>
 	<body>
 		<!-- Navbar -->
-		<nav class="navbar navbar-expand-lg sticky-top p-4">
+		<nav
+			class="navbar navbar-expand-lg sticky-top p-4"
+			style="background-color: #003366">
 			<div class="container">
 				<a class="navbar-brand" href="#">
 					<img
@@ -49,10 +51,91 @@
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<ul class="navbar-nav ms-auto">
 						<li class="nav-item">
-							<a class="nav-link" href="/index.html">Home</a>
+							<a class="nav-link text-white" href="/index.html">Home</a>
 						</li>
+
+						<li class="nav-item dropdown">
+							<a
+								class="nav-link dropdown-toggle text-white"
+								href="./products.html"
+								id="productsDropdown"
+								role="button"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+								onclick="window.location.href = '/products.html';">
+								Products
+							</a>
+
+							<ul class="dropdown-menu">
+								<!-- Professional Submenu -->
+								<li class="dropdown-submenu">
+									<a
+										class="dropdown-item dropdown-toggle"
+										href="#"
+										id="professionalDropdown"
+										role="button">
+										Professional
+									</a>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" href="#">All</a></li>
+										<li>
+											<a class="dropdown-item" href="#">Bakery And Pastry</a>
+										</li>
+										<li><a class="dropdown-item" href="#">Beverage</a></li>
+										<li>
+											<a class="dropdown-item" href="#"
+												>Canned And Processed Food</a
+											>
+										</li>
+									</ul>
+								</li>
+								<!-- Retail Submenu -->
+								<li class="dropdown-submenu">
+									<a
+										class="dropdown-item dropdown-toggle"
+										href="#"
+										id="retailDropdown"
+										role="button">
+										Retail
+									</a>
+									<ul class="dropdown-menu">
+										<li>
+											<a class="dropdown-item" href="#">Chilled And Frozen</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#">Color And Flavor</a>
+										</li>
+										<li><a class="dropdown-item" href="#">Confectionery</a></li>
+									</ul>
+								</li>
+								<!-- Industry Submenu -->
+								<li class="dropdown-submenu">
+									<a
+										class="dropdown-item dropdown-toggle"
+										href="#"
+										id="industryDropdown"
+										role="button">
+										Industry
+									</a>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" href="#">Dairy</a></li>
+										<li>
+											<a class="dropdown-item" href="#"
+												>Decoration And Modeling</a
+											>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#"
+												>Dried Fruits And Nuts</a
+											>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+
 						<li class="nav-item">
-							<a class="nav-link" href="/about.html">About Us</a>
+							<a class="nav-link text-white" href="/about.html">About Us</a>
 						</li>
 					</ul>
 				</div>
@@ -149,10 +232,14 @@
 					<!-- Foodservice Card -->
 					<div class="col-md-4">
 						<div class="product-card">
-							<img src="./img/images.jpg" alt="Foodservice" />
+							<a href="">
+								<img src="./img/images.jpg" alt="Foodservice" />
+							</a>
 							<div class="content">
 								<h3>Foodservice</h3>
-								<div class="divider"></div>
+								<a href="">
+									<div class="divider"></div>
+								</a>
 								<p>Discover Products Designed for Your Recipes</p>
 							</div>
 						</div>
@@ -160,10 +247,14 @@
 					<!-- Retail Card -->
 					<div class="col-md-4">
 						<div class="product-card">
-							<img src="./img/images2.jpg" alt="Retail" />
+							<a href="">
+								<img src="./img/images2.jpg" alt="Retail" />
+							</a>
 							<div class="content">
 								<h3>Retail</h3>
-								<div class="divider"></div>
+								<a href="">
+									<div class="divider"></div>
+								</a>
 								<p>We Bring Products Consumers Really Want</p>
 							</div>
 						</div>
@@ -172,9 +263,12 @@
 					<div class="col-md-4">
 						<div class="product-card">
 							<img src="./img/images.jpg" alt="Industry" />
+
 							<div class="content">
 								<h3>Industry</h3>
-								<div class="divider"></div>
+								<a href="">
+									<div class="divider"></div>
+								</a>
 								<p>Improving Function Health</p>
 							</div>
 						</div>

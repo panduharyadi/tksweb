@@ -40,6 +40,45 @@ a {
 	color: #ffa500 !important;
 }
 
+.navbar .dropdown-menu {
+	position: absolute;
+	display: none;
+	left: 0;
+	top: 100%;
+	z-index: 1050;
+	background-color: white;
+	border-radius: 0;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+	color: #0b3b82;
+	padding: 0.5rem 1rem;
+	transition: background-color 0.3s;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+	background-color: #ffa500;
+	color: white;
+}
+
+.navbar .dropdown-submenu {
+	position: relative;
+}
+
+.navbar .dropdown-submenu .dropdown-menu {
+	top: 0;
+	left: 100%;
+	display: none;
+}
+
+.navbar .dropdown:hover > .dropdown-menu {
+	display: block;
+}
+
+.navbar .dropdown-submenu:hover > .dropdown-menu {
+	display: block;
+}
+
 .hero-overlay {
 	position: relative;
 	display: flex;
@@ -149,8 +188,8 @@ h4 {
 	margin: 0;
 }
 .product-card .divider {
-	width: 50px;
-	height: 2px;
+	width: 100px;
+	height: 3px;
 	background: #ffc107;
 	margin: 1rem auto;
 }
