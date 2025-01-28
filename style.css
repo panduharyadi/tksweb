@@ -11,9 +11,18 @@ a {
 
 .navbar {
 	background-color: #0b3b82;
+	width: 70%;
 	z-index: 20;
 	position: relative;
-	transition: background-color 0.3s ease;
+}
+
+.header-container {
+	position: relative;
+	background-color: #fff;
+}
+
+.logo-container {
+	margin: auto;
 }
 
 .sticky-top {
@@ -37,6 +46,11 @@ a {
 	font-size: 1rem;
 	font-weight: 500;
 	margin-right: 1rem;
+}
+
+.navbar-nav {
+	margin-left: auto;
+	margin-right: 40px;
 }
 
 .navbar .nav-link:hover {
@@ -491,10 +505,9 @@ h4 {
 	width: 100%;
 }
 
-.footer-section {
-	background-color: #0b3b82;
-	color: #fff;
-	padding: 20px 0;
+.footer-container {
+	background-color: #fff;
+	position: relative;
 }
 
 footer img {
@@ -504,6 +517,15 @@ footer img {
 .footer-caption p {
 	text-align: left;
 	font-size: 13px;
+}
+
+.footer-content {
+	background-color: #0b3b82;
+	color: #fff;
+	width: 70%;
+	z-index: 20;
+	position: relative;
+	margin-right: auto;
 }
 
 .static-banner img {
@@ -525,7 +547,7 @@ footer img {
 }
 
 .card img {
-	height: 250px;
+	height: 250px !important;
 	object-fit: cover;
 	border: none;
 }
