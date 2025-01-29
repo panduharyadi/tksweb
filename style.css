@@ -202,10 +202,12 @@ h4 {
 	font-size: 1.8rem;
 	margin-bottom: 0.5rem;
 }
+
 .product-card p {
 	font-size: 1rem;
 	margin: 0;
 }
+
 .product-card .divider {
 	width: 100px;
 	height: 3px;
@@ -510,10 +512,11 @@ h4 {
 .footer-container {
 	background-color: #fff;
 	position: relative;
+	width: 100%;
 }
 
 footer img {
-	width: 100px;
+	width: 120px;
 }
 
 .footer-caption p {
@@ -527,7 +530,7 @@ footer img {
 	width: 70%;
 	z-index: 20;
 	position: relative;
-	margin-right: auto;
+	margin-left: auto;
 }
 
 .static-banner img {
@@ -614,6 +617,30 @@ footer img {
 
 .footer-item {
 	margin-left: auto;
+}
+
+.divider {
+	width: 60px;
+	height: 4px;
+	background-color: #ff8c00;
+	margin-top: 10px;
+}
+
+.contact-section {
+	background-color: #0b3b82;
+}
+
+.text-contact {
+	color: #ff8c00;
+}
+
+.contact-icon {
+	font-size: 16px;
+	color: #ff8c00;
+	width: 14px;
+	height: 14px;
+	margin-right: 10px;
+
 }
 
 @media (max-width: 992px) {
